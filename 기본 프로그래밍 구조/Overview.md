@@ -1,3 +1,8 @@
+# :books: Tech-Stack
+
+## :orange_book:   Language
+### :ledger: JAVA
+
 # 기본 프로그래밍 구조
 
 1. 자바는 모든 **메서드**를 **클래스** 안에 선언한다 . **비정적(nonstatic) 메서드**는 메서드가 속한 클래스의 객체로 호출한다. 
@@ -16,49 +21,52 @@ StackEdit stores your files in your browser, which means all your files are auto
 **메서드**
 [enter link description here](https://m.blog.naver.com/ndb796/221203398703)
 정적 : "공유하는" 이라고 이해하면 됨 공통적으로 사용되는 부분에 선언하여 사용
-				
-				 public class Util {
-		 				private int UtilID;
-						public static int fps = 20;
-						
-						public Util(int utilID){
-						this.UtilID = utilID;
-						}
-						public static void setFps(int fps){
-						Util.fps = fps;
-						}
-						public static int getFps(){
-						return fps;
-						}
-						public void showFps(){
-						System.out.println("유틸 번호: " +utilID);
-						Sysyem.out.println("현재 게임 속도는"+getFps() + "입니다");
-						}
-	}
 
+~~~java
+                
+   public class Util {
+          private int UtilID;
+          public static int fps = 20;
+          
+          public Util(int utilID){
+          this.UtilID = utilID;
+          }
+          public static void setFps(int fps){
+          Util.fps = fps;
+          }
+          public static int getFps(){
+          return fps;
+          }
+          public void showFps(){
+          System.out.println("유틸 번호: " +utilID);
+          Sysyem.out.println("현재 게임 속도는"+getFps() + "입니다");
+      }
+    }
+~~~
 **비정적 멤버**는 특정한 객체마다 별도로 존재한다.
 그러한 측면에서 인스턴스 멤버라고 부른다.
 객체가 생성되는 시점에서 멤버가 생성되고 , 객체를 생성해야만 해당멤버를 사용할 수 있다.
 객체가 사라지면 멤버도 사라진다.
 
 **정적 멤버** 는 클래스당 하나씩 생성된다
-멤버는 객체 내부가 아니라 별도의 공간서 생성되어 메모리 형태로 관리된다.
+멤버는 객체 내부가 아니라 별도의 공간에서 생성되어 메모리 형태로 관리된다.
 그래서 클래스 멤버라고 불린다.
 클래스가 로딩되는 순간에 멤버가 생성되고 , 객체를 생성하기도 전부터 이미 메모리 상에 존재하게 된다.
 객체가 사라져도 해당 멤버는 사라지지 않고 모든 동일 클래스의 객체 사이에서 공유된다. 
-
-	public class Util {
-			private int utilID;
-			public static int fps = 20;
-			public Util(int utilID){
-				this.utilID = utilID;
-			}
-			public static void setFps(int fps){
-			Util.fps = fps;
-			utilID = 1; //error
-			//정적 메소드인 setFps() 에서 비정적 멤버인 utilID의 값을 바꾸려 하면 오류가 남. 
-			이유는 클래스마나 공유되는 메소드가 특정 객체의 멤버 값을 바꾸는 것 자체가 모순
-			}
+~~~ java 
+  public class Util {
+          private int utilID;
+          public static int fps = 20;
+          public Util(int utilID){
+              this.utilID = utilID;
+          }
+          public static void setFps(int fps){
+          Util.fps = fps;
+          utilID = 1; //error
+          //정적 메소드인 setFps() 에서 비정적 멤버인 utilID의 값을 바꾸려 하면 오류가 남. 
+          이유는 클래스마나 공유되는 메소드가 특정 객체의 멤버 값을 바꾸는 것 자체가 모순
+          }
+  ~~~
 ![enter image description here](https://user-images.githubusercontent.com/64263694/120460831-6df22180-c3d4-11eb-8787-513bcbb13786.png)
 util1, util2, util3 객체는 모두 개별적인 비 정적 멤버인 utilID를 가지고 있고 정적 멤버로 fps 공유하는 것임 
 
@@ -75,50 +83,54 @@ util1, util2, util3 객체는 모두 개별적인 비 정적 멤버인 utilID를
 Animal cat = new Animal()
 cat이라는 객체는  Animal의 instance
 즉 인스턴스는 특정 객체가 어떤 클래스의 객체 인지를 관계위주로 설명 할 때 사용됨 
-	- cat은 객체 
-	- cat 은 Animal의 instance
+    - cat은 객체 
+    - cat 은 Animal의 instance
+~~~ java
 Soldier 라이언 = new Soldier();
 Soldier 맥아더 = new Soldier();
 Soldier 이순신 = new Soldier();
-
+~~~
 Soldier 클래스에 라이언이라는 객체를 생성
 라이언은 Soldier의 인스턴스이다.
 
 **2.인스턴스 변수**
 객체들에게 이름을 부여하고 싶다!
 
-	public class Soldier{				
-			String name;
-	}
+~~~ java 
+    public class Soldier{                
+            String name;
+    }
+   ~~~
 클래스에 변수 추가 이런 변수를 인스턴스 변수라고 부름.
 또는 멤버 변수, 속성이라고 함
 
 ryan.name 으로 접근하여 사용 가능
-
-	public class Soldier {
-				String name;
-				public static void main(String[] args){
-				Soldier ryan = new Soldier();
-				System.out.println(ryan.name);
-	}
+~~~ java
+  public class Soldier {
+              String name;
+              public static void main(String[] args){
+              Soldier ryan = new Soldier();
+              System.out.println(ryan.name);
+  }
+   ~~~
 **3. 메소드**
 메소드는 클래스 내에 구현된 함수를 의미하는데 보통 함수라고 말하지 않고 메소드라고 한다.
 변수가 정적인 의미라면 메소드는 동적인 의미가 강하다 
-
-				public class Soldier {
-					String name;
-					public void setName(String name){
-					this.name = name;
-					}
-					public static void main(String[] args){
-					Soldier ryan = new Soldier();
-					ryan.setName ("Lee-jin");
-					System.out.println(ryan.name);
-					}
-				}
-					
-				
-				
+~~~ java
+    public class Soldier {
+        String name;
+        public void setName(String name){
+        this.name = name;
+        }
+        public static void main(String[] args){
+        Soldier ryan = new Soldier();
+        ryan.setName ("Lee-jin");
+        System.out.println(ryan.name);
+        }
+    }
+ ~~~               
+                
+                
 **기본 타입**
 **배열 / 컬렉션**
 [enter link description here](https://sabarada.tistory.com/123)
@@ -141,4 +153,5 @@ ryan.name 으로 접근하여 사용 가능
 ![enter image description here](https://user-images.githubusercontent.com/64263694/120466392-faeba980-c3d9-11eb-897f-75dd7f0dd578.png)
 **Collection 인터페이스에 선언된 주요 메소드**
 ![enter image description here](https://user-images.githubusercontent.com/64263694/120466396-fc1cd680-c3d9-11eb-8571-d31b0eef496f.png)
+
 
