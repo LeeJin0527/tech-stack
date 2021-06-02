@@ -154,7 +154,9 @@ ryan.name 으로 접근하여 사용 가능
 컬렉션은 인터페이스고 아래에서 구현부들이 받아 구현하고 있음.
 
 ![enter image description here](https://user-images.githubusercontent.com/64263694/120466392-faeba980-c3d9-11eb-897f-75dd7f0dd578.png)
+
 **Collection 인터페이스에 선언된 주요 메소드**
+
 ![enter image description here](https://user-images.githubusercontent.com/64263694/120466396-fc1cd680-c3d9-11eb-8571-d31b0eef496f.png)
 
 
