@@ -1,7 +1,3 @@
-# :books: Tech-Stack
-
-## :orange_book:   Language
-### :ledger: JAVA
 
 # 기본 프로그래밍 구조
 
