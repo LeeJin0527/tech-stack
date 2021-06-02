@@ -13,9 +13,10 @@
 
 
 ## 메서드(정적 / 비정적) , 클래스 , 기본타입 , 객체,  배열,  컬렉션 
-StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible **offline!**
+
 **메서드**
-[enter link description here](https://m.blog.naver.com/ndb796/221203398703)
+[정적 / 비정적 메소드](https://m.blog.naver.com/ndb796/221203398703)
+
 정적 : "공유하는" 이라고 이해하면 됨 공통적으로 사용되는 부분에 선언하여 사용
 
 ~~~java
@@ -40,15 +41,18 @@ StackEdit stores your files in your browser, which means all your files are auto
     }
 ~~~
 **비정적 멤버**는 특정한 객체마다 별도로 존재한다.
+
 그러한 측면에서 인스턴스 멤버라고 부른다.
 객체가 생성되는 시점에서 멤버가 생성되고 , 객체를 생성해야만 해당멤버를 사용할 수 있다.
 객체가 사라지면 멤버도 사라진다.
 
 **정적 멤버** 는 클래스당 하나씩 생성된다
+
 멤버는 객체 내부가 아니라 별도의 공간에서 생성되어 메모리 형태로 관리된다.
 그래서 클래스 멤버라고 불린다.
 클래스가 로딩되는 순간에 멤버가 생성되고 , 객체를 생성하기도 전부터 이미 메모리 상에 존재하게 된다.
-객체가 사라져도 해당 멤버는 사라지지 않고 모든 동일 클래스의 객체 사이에서 공유된다. 
+객체가 사라져도 해당 멤버는 사라지지 않고 모든 동일 클래스의 객체 사이에서 공유된다.
+
 ~~~ java 
   public class Util {
           private int utilID;
@@ -64,6 +68,7 @@ StackEdit stores your files in your browser, which means all your files are auto
           }
   ~~~
 ![enter image description here](https://user-images.githubusercontent.com/64263694/120460831-6df22180-c3d4-11eb-8787-513bcbb13786.png)
+
 util1, util2, util3 객체는 모두 개별적인 비 정적 멤버인 utilID를 가지고 있고 정적 멤버로 fps 공유하는 것임 
 
 [enter link description here](https://gyuni.tistory.com/63)
@@ -129,9 +134,11 @@ ryan.name 으로 접근하여 사용 가능
                 
 **기본 타입**
 **배열 / 컬렉션**
-[enter link description here](https://sabarada.tistory.com/123)
 
-[enter link description here](https://www.crocus.co.kr/1553)
+[배열과 컬렉션](https://sabarada.tistory.com/123)
+
+
+
 [enter link description here](http://tcpschool.com/java/java_generic_concept)
 
 컬렉션이란?
